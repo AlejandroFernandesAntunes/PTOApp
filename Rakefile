@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-Railsroot::Application.load_tasks
+Ptoapp::Application.load_tasks
