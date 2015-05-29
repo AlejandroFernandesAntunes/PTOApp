@@ -4,13 +4,19 @@ class PtosController < ApplicationController
   # GET /ptos
   # GET /ptos.json
   def index
-    debugger
-    @ptos = Pto.by_month(params[:month])
+    @ptos = Pto.all
+  end
+
+  def by_month
+    @ptos = Pto.all
+    redirect_to ptos_path
   end
 
   # GET /ptos/1
   # GET /ptos/1.json
   def show
+    debugger
+    @ptos = Pto.by_month(params[:month])
   end
 
   # GET /ptos/new
