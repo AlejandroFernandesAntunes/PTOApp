@@ -5,6 +5,7 @@ class CreateReports < ActiveRecord::Migration
       t.text :body
       t.string :description
 
+      t.belongs_to :pto, index: true
       t.timestamps
     end
   end

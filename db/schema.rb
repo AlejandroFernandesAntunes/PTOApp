@@ -19,17 +19,23 @@ ActiveRecord::Schema.define(version: 20150529183624) do
   create_table "ptos", force: true do |t|
     t.string   "description"
     t.date     "date"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "ptos", ["user_id"], name: "index_ptos_on_user_id", using: :btree
 
   create_table "reports", force: true do |t|
     t.integer  "rate"
     t.text     "body"
     t.string   "description"
+    t.integer  "pto_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "reports", ["pto_id"], name: "index_reports_on_pto_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "name"
