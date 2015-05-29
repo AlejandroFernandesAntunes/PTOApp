@@ -1,0 +1,23 @@
+%h1 Listing ptos
+
+%table
+  %thead
+    %tr
+      %th Description
+      %th Date
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @ptos.each do |pto|
+      %tr
+        %td= pto.description
+        %td= pto.date
+        %td= link_to 'Show', pto
+        %td= link_to 'Edit', edit_pto_path(pto)
+        %td= link_to 'Destroy', pto, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Pto', new_pto_path

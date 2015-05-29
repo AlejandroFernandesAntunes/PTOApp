@@ -1,0 +1,16 @@
+= form_for @pto do |f|
+  - if @pto.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@pto.errors.count, "error")} prohibited this pto from being saved:"
+      %ul
+        - @pto.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :description
+    = f.text_field :description
+  .field
+    = f.label :date
+    = f.date_select :date
+  .actions
+    = f.submit 'Save'

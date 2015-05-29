@@ -2,31 +2,20 @@
   %ul.title-area
     %li.name
       %h1
-        %a{:href => "#"} My Site
-    / Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone
+        %a= link_to t('app_title'), "#"
     %li.toggle-topbar.menu-icon
       %a{:href => "#"}
         %span Menu
   %section.top-bar-section
-    / Right Nav Section
     %ul.right
-      %li.active
-        %a{:href => "#"} Right Button Active
       %li.has-dropdown
-        %a{:href => "#"} Right Button Dropdown
+        %a= link_to t('menu.main_text'), "#"
         %ul.dropdown
           %li
-            %a{:href => "#"} First link in dropdown
-          %li.active
-            %a{:href => "#"} Active link in dropdown
-    / Left Nav Section
-    %ul.left
-      %li
-        %a{:href => "#"} Left Nav Button
-%p Mutant Ninja Turtles !!
-
+            %a= link_to t('user.link_text'), users_path
+          %li
+            %a= link_to t('pto.link_text'), ptos_path
+          %li
+            %a= link_to t('report.link_text'), reports_path
+   
 %footer.row
-%section.small-4.columns
-  Copyright 2013
-%section.small-8.columns
-  All rights reserved.

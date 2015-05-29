@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Description:
+  = @pto.description
+%p
+  %b Date:
+  = @pto.date
+
+= link_to 'Edit', edit_pto_path(@pto)
+\|
+= link_to 'Back', ptos_path
