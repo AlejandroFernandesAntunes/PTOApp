@@ -4,7 +4,8 @@ class PtosController < ApplicationController
   # GET /ptos
   # GET /ptos.json
   def index
-    @ptos = Pto.all
+    debugger
+    @ptos = Pto.by_month(params[:month])
   end
 
   # GET /ptos/1
@@ -69,6 +70,6 @@ class PtosController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pto_params
-      params.require(:pto).permit(:description, :date)
+      params.require(:pto).permit(:description, :date, :month)
     end
 end
