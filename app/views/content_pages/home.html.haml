@@ -1,22 +1,4 @@
-%nav.top-bar{"data-topbar" => "", :role => "navigation"}
-  %ul.title-area
-    %li.name
-      %h1
-        %a= link_to t('app_title'), "#"
-    %li.toggle-topbar.menu-icon
-      %a{:href => "#"}
-        %span Menu
-  %section.top-bar-section
-    %ul.right
-      %li.has-dropdown
-        %a= link_to t('menu.main_text'), "#"
-        %ul.dropdown
-          %li
-            %a= link_to t('user.link_text'), users_path
-          %li
-            %a= link_to t('pto.link_text'), ptos_path
-          %li
-            %a= link_to t('report.link_text'), reports_path
+
 %a= link_to t('common.january'), by_month_path
 %a= link_to t('common.february'), by_month_path
 %a= link_to t('common.march'), by_month_path
